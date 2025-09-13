@@ -1,0 +1,419 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jul 31 20:24:30 2025
+# Process ID: 25732
+# Current directory: D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.runs/synth_1
+# Command line: vivado.exe -log vending_machine_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vending_machine_top.tcl
+# Log file: D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.runs/synth_1/vending_machine_top.vds
+# Journal file: D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source vending_machine_top.tcl -notrace
+Command: synth_design -top vending_machine_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24928 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 562.891 ; gain = 183.992
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'vending_machine_top' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/vending_machine.v:1]
+	Parameter ITEM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter CURRENCY_WIDTH bound to: 7 - type: integer 
+	Parameter MAX_ITEMS bound to: 1024 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'item_select' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/item_select.v:1]
+	Parameter ITEM_ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'item_select' (1#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/item_select.v:1]
+INFO: [Synth 8-6157] synthesizing module 'currency_val' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/currency_val.v:1]
+	Parameter CURRENCY_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'currency_val' (2#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/currency_val.v:1]
+INFO: [Synth 8-6157] synthesizing module 'main_controller' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/main_controller.v:1]
+	Parameter IDLE bound to: 2'b00 
+	Parameter SELECTED bound to: 2'b01 
+	Parameter CURRENCY bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/main_controller.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'main_controller' (3#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/main_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'config_block' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/config_block.v:1]
+	Parameter MAX_ITEMS bound to: 1024 - type: integer 
+WARNING: [Synth 8-6104] Input port 'prdata' has an internal driver [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/config_block.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'config_block' (4#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/config_block.v:1]
+INFO: [Synth 8-6157] synthesizing module 'item_memory' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/item_memory.v:1]
+	Parameter MAX_ITEMS bound to: 1024 - type: integer 
+WARNING: [Synth 8-3848] Net stored_item_id in module/entity item_memory does not have driver. [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/item_memory.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'item_memory' (5#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/item_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'output_logic' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/output_logic.v:1]
+	Parameter CURRENCY_WIDTH bound to: 7 - type: integer 
+	Parameter ITEM_ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'output_logic' (6#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/output_logic.v:1]
+WARNING: [Synth 8-3848] Net prdata in module/entity vending_machine_top does not have driver. [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/vending_machine.v:23]
+WARNING: [Synth 8-3848] Net mem_rdata in module/entity vending_machine_top does not have driver. [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/vending_machine.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'vending_machine_top' (7#1) [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/vending_machine.v:1]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[7]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[6]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[5]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[4]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[3]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[2]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[1]
+WARNING: [Synth 8-3331] design item_memory has unconnected port stored_item_id[0]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[7]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[6]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[5]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[4]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[3]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[2]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[1]
+WARNING: [Synth 8-3331] design item_memory has unconnected port dispensed_item[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 627.051 ; gain = 248.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 627.051 ; gain = 248.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 627.051 ; gain = 248.152
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'main_controller'
+INFO: [Synth 8-4471] merging register 'mem_raddr_reg[9:0]' into 'mem_waddr_reg[9:0]' [D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.srcs/sources_1/new/config_block.v:47]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                SELECTED |                               01 |                               01
+                CURRENCY |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'main_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 627.051 ; gain = 248.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---RAMs : 
+	              24K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module item_select 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module currency_val 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module main_controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+Module config_block 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module item_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
++---RAMs : 
+	              24K Bit         RAMs := 1     
+Module output_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[31]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[30]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[29]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[28]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[27]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[26]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[25]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[24]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[23]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[22]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[21]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[20]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[19]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[18]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[17]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[16]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[15]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[14]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[13]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[12]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[11]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[10]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[9]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[8]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[7]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[6]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[5]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[4]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[3]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[2]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[1]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port prdata[0]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port paddr[14]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port paddr[13]
+WARNING: [Synth 8-3331] design vending_machine_top has unconnected port paddr[12]
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM u_item_memory/mem_reg to conserve power
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|item_memory: | mem_reg    | 1 K x 24(WRITE_FIRST)  |   | R | 1 K x 24(READ_FIRST)   | W |   | Port A and B     | 0      | 1      | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_2/u_item_memory/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|item_memory: | mem_reg    | 1 K x 24(WRITE_FIRST)  |   | R | 1 K x 24(READ_FIRST)   | W |   | Port A and B     | 0      | 1      | 
++-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance u_item_memory/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |     9|
+|3     |LUT1     |    12|
+|4     |LUT2     |    13|
+|5     |LUT3     |     4|
+|6     |LUT4     |     9|
+|7     |LUT5     |    18|
+|8     |LUT6     |     2|
+|9     |RAMB36E1 |     1|
+|10    |FDCE     |    79|
+|11    |IBUF     |    61|
+|12    |OBUF     |    19|
+|13    |OBUFT    |    32|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------+----------------+------+
+|      |Instance            |Module          |Cells |
++------+--------------------+----------------+------+
+|1     |top                 |                |   261|
+|2     |  u_config_block    |config_block    |    54|
+|3     |  u_currency_val    |currency_val    |    26|
+|4     |  u_item_memory     |item_memory     |    28|
+|5     |  u_item_select     |item_select     |    11|
+|6     |  u_main_controller |main_controller |     5|
+|7     |  u_output_logic    |output_logic    |    23|
++------+--------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 55 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 762.137 ; gain = 383.238
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 882.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 882.020 ; gain = 526.961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 882.020 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/summer intern/verilog practice/VENDING_MACHINE_CONTROLLER/VENDING_MACHINE_CONTROLLER.runs/synth_1/vending_machine_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vending_machine_top_utilization_synth.rpt -pb vending_machine_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 31 20:24:58 2025...
